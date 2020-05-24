@@ -1,0 +1,44 @@
+.input-number {
+    display: inline-flex;
+    height: 38px;
+    color: #000;
+    width: 102px;
+    button, input {
+        height: 38px;
+        position: relative;
+        color: #000;
+        box-shadow: none;
+        border-top: 1px solid var(--border-color-input-number);
+        border-bottom: 1px solid var(--border-color-input-number);
+        text-align: center;
+    }
+    input {
+        border-right-color: transparent;
+        border-left-color: transparent;
+        font-weight: bold;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 20px;
+    }
+    button.btn {
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:active, &:hover, &:focus{
+            outline: none;
+            color: #000;
+        }
+        &:first-child{
+            border-left: 1px solid var(--border-color-input-number);
+            border-right: 0;
+        }
+        &:last-child {
+            border-right: 1px solid var(--border-color-input-number);
+            border-left: none;
+        }
+    }
+}

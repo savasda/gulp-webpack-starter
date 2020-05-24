@@ -7,19 +7,20 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  watch: true,
   watchOptions: {
     ignored: /node_modules/
   },
   entry: {
-    main: './src/index.js',
-    vendor: './src/vendors/index.js'
+    main: `${__dirname}/src/index.js`,
+    vendor: `${__dirname}/webroot/WEB-INF/_ui-src/responsive/lib/common/index.js`
   },
   devtool: 'source-map', // Generate separate source map files
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [new TerserPlugin()],
     removeAvailableModules: false,
-    removeEmptyChunks: false,
+    removeEmptyChunks: true,
     splitChunks: false,
   },
   module: {
@@ -37,6 +38,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts']
   },
+  target: 'web',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')

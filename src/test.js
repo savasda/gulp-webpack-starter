@@ -4,7 +4,7 @@ class TestClass {
     this.name = 'test';
   }
   getAll() {
-    return 13
+    return 137
   }
 }
 

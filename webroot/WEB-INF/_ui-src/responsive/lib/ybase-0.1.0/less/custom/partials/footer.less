@@ -1,0 +1,122 @@
+footer {
+    background: #333333;
+    margin-top: 50px;
+    a{
+        color: #f7f7f7;
+        text-transform: uppercase;
+        font-size: 18px;
+        .regular();
+        &:hover {
+            color: #fff;
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+        list-style-type: none;
+        a{
+            display: inline-block;
+            padding: 3px 5px;
+        }
+    }
+    .social {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+.footer-bottom {
+    background: #000;
+}
+.footer-bottom--links{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    li a {
+        padding: 5px 20px;
+        border-top: 1px solid #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.footer-social {
+    li {
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    a {
+        
+        svg{
+            height: 32px;
+        }
+        path{
+            fill: #fff;
+        }
+    }
+}
+
+.footer-top-nav {
+    display: flex;
+    justify-content: flex-start;
+    li {
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .footer-bottom--links{
+        li  {
+           padding: 0 15px;
+        }
+        a {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-social{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    .footer-top-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-bottom--links{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        li  {
+           padding: 0 15px;
+           a{
+               border-top: none;
+               border-bottom: none;
+               font-size: 16px;
+           }
+        }
+    }
+    .footer-copyright p {
+        text-align: center;
+    }
+}
+
+.footer-copyright {
+    p {
+        color: #666;
+        margin: 15px 0;
+        margin-top: 0;
+    }
+}

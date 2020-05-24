@@ -1,10 +1,6 @@
-import $ from "jquery";
-import * as bootstrap from "bootstrap";
-
-
 import { Foo } from './foo';
-// import * as test from './test';
 
 
 const x = new Foo();
-x.writeLine('testasasAA');
+x.writeLine('testAA');
+console.log(6880007);

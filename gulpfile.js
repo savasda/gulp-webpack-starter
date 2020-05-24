@@ -21,7 +21,7 @@ let src_path = __dirname + '/src/'
 
 gulp.task('scripts', (done) => {
   // run webpack
-  webpack(webpackConfig, onComplete);
+  webpack({...webpackConfig, mode: 'development'}, onComplete);
   function onComplete(error, stats) {
     if (error) {
       onError(error);
@@ -60,7 +60,7 @@ gulp.task('less', function() {
 
 gulp.task('watch', function() {
 	gulp.watch(['./src/less/*.less'], gulp.parallel('less'));
-	gulp.watch([src_path + '*.js', src_path +  '*.ts'], gulp.parallel('scripts'));
+	// gulp.watch([src_path + '*.js', src_path +  '*.ts'], gulp.parallel('scripts'));
 });
 
 gulp.task('removedist', function() { return del(['/dist'], { force: true }) });

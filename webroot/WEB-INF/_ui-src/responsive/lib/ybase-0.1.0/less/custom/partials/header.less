@@ -1,0 +1,154 @@
+header {
+  padding-top: 20px;
+  position: relative;
+  &::before{
+    height: 10px;
+    background: #333;
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+.search-box {
+  button {
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    height: 100%;
+    border-left: none;
+    margin-left: -1px;
+  }
+}
+
+.img-responsive{
+  display: inline-block;
+  max-width: 100%;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &--control{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    .has-goods{
+      top: -6px;
+      left: 22px;
+      position: absolute;
+    }
+    &:first-child{
+      margin-right: 24px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    i{
+      padding-right: 8px;
+      font-size: 30px;
+    }
+  }
+}
+
+nav.header--nav {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    margin-left: -12px;
+  }
+  a {
+    padding: 15px 12px;
+    font-size: 15.5px;
+    &:after{
+      content: "";
+      border: none;
+      position: static;
+      background: transparent;
+    }
+  }
+  li {
+    padding: 0;
+    position: relative;
+    svg {
+      position: absolute;
+      right: 2px;
+      top: -10%;
+      bottom: 0;
+      margin: auto;
+      
+    }
+    &::before{
+      display: none;
+    }
+    padding-bottom: 10px;
+    &.navigation-node--has-nodes {
+      a {
+        &::after {
+          content: '';
+        }
+      }
+    }
+  }
+  
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  img {
+    max-width: 100%;
+  }
+  i{
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 3px;
+  }
+}
+.search-box--mobile{
+  padding: 10px 0 20px;
+}
+.navigation-node--sub-container {
+  margin-left: 0;
+}
+.navigation-node--sub {
+  .navigation-node--sub-container {
+    margin-left: 0;
+    li {
+      padding-bottom: 0;
+    }
+    a {
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+// .navigation-node--sub li > a:hove{
+
+// }
+@media (max-width: 992px) {
+  nav.header--nav a{
+    font-size: 14px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .header-controls--control{
+    i {
+      padding-right: 0;
+    }
+  }
+}

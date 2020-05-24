@@ -3,8 +3,8 @@ export class Foo {
     console.log(nsg);
   }
   getAllS() {
-    return 123213;
+    return 'sda';
   }
 
-  
+
 }

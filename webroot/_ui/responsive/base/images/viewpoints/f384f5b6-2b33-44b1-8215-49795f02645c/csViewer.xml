@@ -1,0 +1,17 @@
+﻿<krpano version="1.20" onstart="initateVariables();  loadscene(scene_45fc4395-f2f6-49b7-8fc8-568728535854);">
+  <action name="initateVariables">set(showHotspots,false);</action>
+  <include url="/_ui/responsive/base/images/krpano/static/krpano/progress_loadingbar.xml" />
+  <include url="/_ui/responsive/base/images/krpano/static/krpano/progress_loadinganimation.xml" />
+  <action name="loadscript" keep="true">if(webvr.isenabled, set(showHotspots,true);toggleHotspots(););</action>
+  <scene name="scene_45fc4395-f2f6-49b7-8fc8-568728535854" title="Viewpoint 01">
+    <events onloadcomplete="loadScript(); webvr.resetSensor(12);" onclick="if(webvr.isenabled, trace(on click in VR);, trace(on click no VR); js(onClick()););" />
+    <action name="show_hover_image">set(hotspot[%1].visible, true);set(hotspot[%2].visible, false);</action>
+    <action name="hide_hover_image">set(hotspot[%1].visible, false);set(hotspot[%2].visible, true);</action>
+    <view hlookat="12" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="120" limitview="auto" vlookatmin="-89" vlookatmax="+89" />
+    <startupview hlookat="12" vlookat="0" fov="90" />
+    <image stereo="true" stereolabels="1|2">
+      <cube url="/_ui/responsive/base/images/viewpoints/f384f5b6-2b33-44b1-8215-49795f02645c/45fc4395-f2f6-49b7-8fc8-568728535854/image_%s.jpg" />
+    </image>
+    <action name="toggleHotspots">if (get(showHotspots), , );</action>
+  </scene>
+</krpano>
